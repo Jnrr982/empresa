@@ -60,10 +60,11 @@
         <div class="container">
             <h2>Nuestro Catálogo de Productos</h2>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" id="card-camaras" onclick="mostrarDetallesCamaras()" style="cursor: pointer;">
                     <i class="fa-solid fa-camera-retro"></i>
                     <h3>Kit de Cámaras con IA</h3>
-                    <p>Sistemas de videovigilancia avanzados equipados con Reconocimiento Facial en tiempo real.</p>
+                    <p>Sistemas de videovigilancia avanzados equipados con Reconocimiento Facial en tiempo real. [cite: 19]</p>
+                    <small style="color: var(--naranja-neon);">Click para ver modelos →</small>
                 </div>
                 <div class="service-card">
                     <i class="fa-brands fa-fly"></i>
@@ -78,6 +79,27 @@
             </div>
         </div>
     </section>
+    
+    <section id="detalles-camaras" class="details-section" style="display: none;">
+    <div class="container">
+        <button onclick="volverAServicios()" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver a Servicios</button>
+        <h2>Modelos de Kits de Cámaras</h2>
+        <div class="services-grid">
+            <div class="service-card detail">
+                <h3>Kit Aegis Home</h3>
+                <p>4 Cámaras 4K + Reconocimiento facial básico + App móvil.</p>
+            </div>
+            <div class="service-card detail">
+                <h3>Kit Aegis Business</h3>
+                <p>8 Cámaras + Analítica de conteo de personas + Almacenamiento en nube extendido.</p>
+            </div>
+            <div class="service-card detail">
+                <h3>Kit Aegis Industrial</h3>
+                <p>16 Cámaras térmicas + IA de detección de intrusos en perímetros extensos.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section id="contacto" class="contact">
         <div class="container">
@@ -109,5 +131,17 @@
     <footer>
         <p>&copy; 2026 Aegis Vision Tech S.A.S. Todos los derechos reservados.</p>
     </footer>
+    <script>
+    function mostrarDetallesCamaras() {
+        document.getElementById('servicios').style.display = 'none';
+        document.getElementById('detalles-camaras').style.display = 'block';
+        window.scrollTo(0, 0);
+    }
+
+    function volverAServicios() {
+        document.getElementById('detalles-camaras').style.display = 'none';
+        document.getElementById('servicios').style.display = 'block';
+    }
+</script>
 </body>
 </html>
