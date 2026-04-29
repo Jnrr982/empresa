@@ -249,3 +249,31 @@ footer {
     padding: 20px;
     border-top: 2px solid var(--naranja-neon);
 }
+
+/* Estilos para la sección de detalles */
+.details-section {
+    background-color: var(--azul-claro);
+    color: var(--blanco);
+    min-height: 60vh;
+}
+
+.btn-back {
+    background: transparent;
+    color: var(--naranja-neon);
+    border: 1px solid var(--naranja-neon);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background: var(--naranja-neon);
+    color: var(--blanco);
+}
+
+.service-card.detail {
+    border: 1px solid var(--naranja-neon);
+    background: rgba(255, 90, 0, 0.05);
+}
